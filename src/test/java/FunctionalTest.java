@@ -14,7 +14,7 @@ public class FunctionalTest {
     public WebDriver acessarAplicacao() throws MalformedURLException {
 
         DesiredCapabilities cap = DesiredCapabilities.chrome();
-        WebDriver driver = new RemoteWebDriver(new URL("http://172.20.0.2:4444/wd/hub"), cap);
+        WebDriver driver = new RemoteWebDriver(new URL("http://172.29.0.2:4444/wd/hub"), cap);
         driver.navigate().to("http://192.168.0.103:8080/tasks/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
